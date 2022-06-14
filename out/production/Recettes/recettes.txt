@@ -1,0 +1,3 @@
+recette1,pomme,2,lait,1,pomme de terre,9,
+rercette2,poire(williams),3,lait,1,
+recette3,poire,4,lait,3
