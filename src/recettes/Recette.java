@@ -30,8 +30,8 @@ public final class Recette {
 //    }
     public void addComposant(Composant composant){
         for (Composant c : ingredients){
-            if (c.getIngredient().getNom()==composant.getIngredient().getNom() && c.getIngredient().getSpecification().equals(composant.getIngredient().getSpecification())){
-                throw new IllegalArgumentException(String.format("Déjà dans la recette ! (%s)", composant.getIngredient().getNom()));
+            if (c.getIngredient().getName()==composant.getIngredient().getName() && c.getIngredient().getSpecification().equals(composant.getIngredient().getSpecification())){
+                throw new IllegalArgumentException(String.format("Déjà dans la recette ! (%s)", composant.getIngredient().getName()));
             }
         }
         ingredients.add(composant);
@@ -48,7 +48,7 @@ public final class Recette {
             if (e.getUnite()!=null)
                 sb.append(String.valueOf(e.getUnite()).toLowerCase());
             sb.append(" ")
-                    .append(e.getIngredient().getNom())
+                    .append(e.getIngredient().getName())
                     .append(e.getIngredient().getSpecification())
                     .append("\n");
         }
@@ -59,7 +59,7 @@ public final class Recette {
 
     public boolean contains(IngredientNom ingredientNom){
         for (Composant c : ingredients){
-            if (c.getIngredient().getNom()==ingredientNom){
+            if (c.getIngredient().getName()==ingredientNom){
                 return true;
             }
         }
@@ -77,7 +77,7 @@ public final class Recette {
     public List<IngredientNom> getIngredientNames() {
         List<IngredientNom> list = new ArrayList<>();
         for (Composant i : ingredients){
-            list.add(i.getIngredient().getNom());
+            list.add(i.getIngredient().getName());
         }
         return list;
     }

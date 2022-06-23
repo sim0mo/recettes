@@ -3,7 +3,6 @@ package recettes;
 import recettes.ingredients.Composant;
 import recettes.ingredients.Ingredient;
 import recettes.ingredients.IngredientNom;
-import static recettes.ingredients.IngredientNom.*;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -32,7 +31,7 @@ public final class Main {
     public static void main(String[] args) {
         Recueil gastronogeek = load("/gastronogeek.txt");
 //        Recueil catherine1 = load("/catherine1.txt");
-        gastronogeek.printAllRecettesWith(ANANAS);
+        gastronogeek.printAllRecettesWith("ANANAS");
 
         //gastronoGeek.recettesDisponibles(promptIngredientsIllimited())).forEaach(System.out::println);
         //catherine1.printAllRecettesWith(LAIT);
@@ -63,7 +62,7 @@ public final class Main {
         List<IngredientNom> list = new ArrayList<>();
         String input = keyb.nextLine();
         while (!input.isEmpty()){
-            list.add(Ingredient.fromString(input).getNom());
+            list.add(Ingredient.fromString(input).getName());
             input = keyb.nextLine();
         }
         return list;

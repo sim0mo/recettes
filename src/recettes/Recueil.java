@@ -1,7 +1,6 @@
 package recettes;
 
 import recettes.ingredients.Composant;
-import recettes.ingredients.Ingredient;
 import recettes.ingredients.IngredientNom;
 
 import java.io.*;
@@ -68,14 +67,14 @@ public final class Recueil {
                     r.getIngredientNames().stream()
                             .allMatch(
                                     ingredientInRecipe -> ingredientsDisponibles.stream()
-                                            .map(composant -> composant.getIngredient().getNom())
+                                            .map(composant -> composant.getIngredient().getName())
                                             .anyMatch(ingredientInRecipe::equals))
 
             ){ //détermine si leur nombre est suffisant
                 boolean faisable = true;
                 for (Composant required : r.getIngredients()){
                     for (Composant disposable : ingredientsDisponibles){
-                        if (required.getIngredient().getNom() == disposable.getIngredient().getNom()){
+                        if (required.getIngredient().getName() == disposable.getIngredient().getName()){
                             //System.out.println(required.quantiteFondamentale() + "   " + disposable.quantiteFondamentale());
                             faisable &= (required.quantiteFondamentale() <= disposable.quantiteFondamentale());
                         }
@@ -100,7 +99,7 @@ public final class Recueil {
             int nMatches = 0;
             for(Composant c : r.getIngredients()){
                 for(Composant d : ingredientsDisponibles){
-                    if(c.getIngredient().getNom() == d.getIngredient().getNom() && c.quantiteFondamentale() <= d.quantiteFondamentale()){
+                    if(c.getIngredient().getName() == d.getIngredient().getName() && c.quantiteFondamentale() <= d.quantiteFondamentale()){
                         nMatches++;
                     }
                 }
@@ -139,9 +138,9 @@ public final class Recueil {
         }
     }
 
-    public void printAllRecettesWith(IngredientNom i1, IngredientNom... i){
+    public void printAllRecettesWith(String i1, String... i){
         System.out.printf("Recettes contenant : %s %s\n", i1, Arrays.toString(i));
-        List<IngredientNom> l = new ArrayList<>(List.of(i));
+        List<String> l = new ArrayList<>(List.of(i));
         l.add(0, i1);
         for (Recette r : searchConjunctive(l)){
             System.out.println(r.getName());

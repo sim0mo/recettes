@@ -1,13 +1,16 @@
 package recettes.ingredients;
 
-import java.util.Locale;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 public final class Ingredient {
-    private IngredientNom nom;
+    private final String name;
     private String specification = "";
 
-    public Ingredient(IngredientNom nom){
-        this.nom = nom;
+    public Ingredient(String nom){
+        this.name = nom;
     }
 
     public Ingredient setSpecification(String spec){
@@ -21,25 +24,49 @@ public final class Ingredient {
 
     public String getName(){
         return (specification.equals("") ?
-                nom.toString() :
-                this.nom.toString() + "(" + specification + ")");
+                name.toString() :
+                this.name.toString() + "(" + specification + ")");
     }
 
-    public IngredientNom getNom(){
-        return nom;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ingredient that = (Ingredient) o;
+        return name.equals(that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode();
+    }
+
+
+
+    private static Set<String> allowedIngredients = new HashSet<>();
+    static{
+        try{
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(
+                            Objects.requireNonNull(Composant.class.getResourceAsStream("ingredients.txt")), StandardCharsets.UTF_8));
+            reader.lines().forEachOrdered(l -> allowedIngredients.addAll(Arrays.asList(l.split(","))));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static Ingredient fromString(String s){
-        s = s.replaceAll("[èéê]", "e").replaceAll("[àâ]", "a").replaceAll(" \\(", "(").replaceAll(" ", "_").replaceAll("'", "_");
+        s = s
+                .replaceAll("[èéê]", "e")
+                .replaceAll("[àâ]", "a")
+                .replaceAll(" \\(", "(")
+                .replaceAll(" ", "_")
+                .replaceAll("'", "_");
         s = s.toUpperCase(Locale.ROOT);
-        Ingredient i = s.contains("(")
-                ? new Ingredient(IngredientNom.valueOf(s.substring(0,s.indexOf("(")))).setSpecification(s.substring(s.indexOf("("), s.indexOf(")")+1))
-                : new Ingredient(IngredientNom.valueOf(s));
-        i.resolve();
-        return i;
+        return new Ingredient(s);
+//        return s.contains("(")
+//                ? new Ingredient(new IngredientNom(s.substring(0,s.indexOf("(")))).setSpecification(s.substring(s.indexOf("("), s.indexOf(")")+1))
+//                : new Ingredient(new IngredientNom(s));
     }
 
-    private void resolve() {
-        this.nom = this.nom.resolve();
-    }
 }
