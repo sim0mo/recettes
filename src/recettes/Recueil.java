@@ -1,7 +1,6 @@
 package recettes;
 
 import recettes.ingredients.Composant;
-import recettes.ingredients.IngredientNom;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -24,31 +23,31 @@ public final class Recueil {
         return allRecettes.toString();
     }
 
-    public List<Recette> searchConjunctive(IngredientNom ingredientNom){
+    public List<Recette> searchConjunctive(String String){
         List<Recette> recettesFaisables = new ArrayList<>();
         for (Recette r : recettes){
-            if (r.contains(ingredientNom))
+            if (r.contains(String))
                 recettesFaisables.add(r);
         }
         return recettesFaisables;
     }
 
-    public List<Recette> searchConjunctive(List<IngredientNom> ingredients){
+    public List<Recette> searchConjunctive(List<String> ingredients){
         List<Recette> recettesFaisables = new ArrayList<>();
         for (Recette r : recettes){
             if (r.contains(ingredients.get(0))) {
                 recettesFaisables.add(r);
             }
         }
-        for (IngredientNom i : ingredients.subList(1, ingredients.size())){
+        for (String i : ingredients.subList(1, ingredients.size())){
             recettesFaisables.removeIf(r -> !r.contains(i));
         }
         return recettesFaisables;
     }
 
-    public List<Recette> searchDisjunctive(List<IngredientNom> ingredients) {
+    public List<Recette> searchDisjunctive(List<String> ingredients) {
         List<Recette> recettesFaisables = new ArrayList<>();
-        for (IngredientNom i : ingredients){
+        for (String i : ingredients){
             for (Recette r : recettes){
                 if(r.contains(i) && !recettesFaisables.contains(r)){
                     recettesFaisables.add(r);

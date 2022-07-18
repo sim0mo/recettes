@@ -2,7 +2,6 @@ package recettes;
 
 import recettes.ingredients.Composant;
 import recettes.ingredients.Ingredient;
-import recettes.ingredients.IngredientNom;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -58,8 +57,8 @@ public final class Main {
         return new Recueil.Loader().loadFrom(Main.class.getResourceAsStream(s)).build();
     }
 
-    private static List<IngredientNom> promptIngredientNames() {
-        List<IngredientNom> list = new ArrayList<>();
+    private static List<String> promptIngredientNames() {
+        List<String> list = new ArrayList<>();
         String input = keyb.nextLine();
         while (!input.isEmpty()){
             list.add(Ingredient.fromString(input).getName());

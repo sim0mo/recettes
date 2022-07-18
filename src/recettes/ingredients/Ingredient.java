@@ -24,8 +24,8 @@ public final class Ingredient {
 
     public String getName(){
         return (specification.equals("") ?
-                name.toString() :
-                this.name.toString() + "(" + specification + ")");
+                name :
+                this.name + "(" + specification + ")");
     }
 
     @Override

@@ -1,7 +1,6 @@
 package recettes;
 
 import recettes.ingredients.Composant;
-import recettes.ingredients.IngredientNom;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -57,7 +56,7 @@ public final class Recette {
 
 
 
-    public boolean contains(IngredientNom ingredientNom){
+    public boolean contains(String ingredientNom){
         for (Composant c : ingredients){
             if (c.getIngredient().getName()==ingredientNom){
                 return true;
@@ -74,8 +73,8 @@ public final class Recette {
         return name;
     }
 
-    public List<IngredientNom> getIngredientNames() {
-        List<IngredientNom> list = new ArrayList<>();
+    public List<String> getIngredientNames() {
+        List<String> list = new ArrayList<>();
         for (Composant i : ingredients){
             list.add(i.getIngredient().getName());
         }
