@@ -7,6 +7,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public final class Recueil {
     private final List<Recette> recettes;
@@ -139,8 +140,8 @@ public final class Recueil {
 
     public void printAllRecettesWith(String i1, String... i){
         System.out.printf("Recettes contenant : %s %s\n", i1, Arrays.toString(i));
-        List<String> l = new ArrayList<>(List.of(i));
-        l.add(0, i1);
+        List<String> l = Arrays.stream(i).map(Main::cleanString).collect(Collectors.toList());
+        l.add(0, Main.cleanString(i1));
         for (Recette r : searchConjunctive(l)){
             System.out.println(r.getName());
         }

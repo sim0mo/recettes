@@ -1,5 +1,7 @@
 package recettes.ingredients;
 
+import recettes.Main;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
@@ -13,9 +15,9 @@ public final class Ingredient {
         this.name = nom;
     }
 
-    public Ingredient setSpecification(String spec){
-        this.specification = spec;
-        return this;
+    public Ingredient(String nom, String specification){
+        this.name = nom;
+        this.specification = specification;
     }
 
     public String getSpecification() {
@@ -43,12 +45,13 @@ public final class Ingredient {
 
 
 
-    private static Set<String> allowedIngredients = new HashSet<>();
+    private static final Set<String> allowedIngredients = new HashSet<>();
+
     static{
         try{
             BufferedReader reader = new BufferedReader(
                     new InputStreamReader(
-                            Objects.requireNonNull(Composant.class.getResourceAsStream("ingredients.txt")), StandardCharsets.UTF_8));
+                            Objects.requireNonNull(Ingredient.class.getClassLoader().getResourceAsStream("ingredients.txt")), StandardCharsets.UTF_8));
             reader.lines().forEachOrdered(l -> allowedIngredients.addAll(Arrays.asList(l.split(","))));
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -56,17 +59,19 @@ public final class Ingredient {
     }
 
     public static Ingredient fromString(String s){
-        s = s
-                .replaceAll("[èéê]", "e")
-                .replaceAll("[àâ]", "a")
-                .replaceAll(" \\(", "(")
-                .replaceAll(" ", "_")
-                .replaceAll("'", "_");
-        s = s.toUpperCase(Locale.ROOT);
-        return new Ingredient(s);
-//        return s.contains("(")
-//                ? new Ingredient(new IngredientNom(s.substring(0,s.indexOf("(")))).setSpecification(s.substring(s.indexOf("("), s.indexOf(")")+1))
-//                : new Ingredient(new IngredientNom(s));
+        s = Main.cleanString(s);
+
+        Ingredient result;
+        if (s.contains("(")){
+            result = new Ingredient(s.substring(0,s.indexOf("(")), s.substring(s.indexOf("("), s.indexOf(")")+1));
+        } else{
+            result = new Ingredient(s);
+        }
+        if (!allowedIngredients.contains(result.name)){
+            throw new IllegalArgumentException(String.format("Aucun ingrédient correspondant à <<%s>> n'est répertorié.", s));
+        }
+        return result;
+
     }
 
 }

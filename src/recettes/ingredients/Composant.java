@@ -1,5 +1,7 @@
 package recettes.ingredients;
 
+import recettes.Main;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
@@ -51,7 +53,8 @@ public final class Composant {
         try{
             BufferedReader reader = new BufferedReader(
                     new InputStreamReader(
-                            Objects.requireNonNull(Composant.class.getResourceAsStream("synonyms.txt")), StandardCharsets.UTF_8));
+                            Objects.requireNonNull(Composant.class.getClassLoader().getResourceAsStream("synonyms.txt")),
+                            StandardCharsets.UTF_8));
             reader.lines().forEachOrdered(l -> {
                 List<String> line = List.of(l.split(","));
                 for(String synonym : line.subList(1, line.size())){
@@ -70,11 +73,8 @@ public final class Composant {
 
         //System.out.println(zero);
         Ingredient in;
-        try {
-            in = Ingredient.fromString(second);
-        } catch (IllegalArgumentException e){
-            throw new IllegalArgumentException(String.format("Aucun ingrédient correspondant à <<%s>> n'est répertorié.", second));
-        }
+        in = Ingredient.fromString(second);
+
         Unite un = Unite.parse(first);
         double qu = Unite.parseNumber(first);
         return new Composant(in, qu, un);

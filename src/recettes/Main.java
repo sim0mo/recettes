@@ -7,6 +7,7 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 
 public final class Main {
@@ -17,10 +18,16 @@ public final class Main {
     private static List<Composant> parseFrigo(String fileName) {
         InputStream inputStream = Main.class.getResourceAsStream(fileName);
         List<Composant> list = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(
-                new InputStreamReader(
-                        inputStream, StandardCharsets.UTF_8))) {
-            reader.lines().map(x -> Composant.parse("1000kg " + x)).forEachOrdered(list::add);
+        try {
+            assert inputStream != null;
+            try (BufferedReader reader =
+                         new BufferedReader(
+                                 new InputStreamReader(
+                                         inputStream, StandardCharsets.UTF_8))) {
+                reader.lines()
+                        .map(x -> Composant.parse("1000kg " + x))
+                        .forEachOrdered(list::add);
+            }
         } catch (IOException e){
             throw new UncheckedIOException(e);
         }
@@ -30,7 +37,7 @@ public final class Main {
     public static void main(String[] args) {
         Recueil gastronogeek = load("/gastronogeek.txt");
 //        Recueil catherine1 = load("/catherine1.txt");
-        gastronogeek.printAllRecettesWith("ANANAS");
+        gastronogeek.printAllRecettesWith("vodka" );
 
         //gastronoGeek.recettesDisponibles(promptIngredientsIllimited())).forEaach(System.out::println);
         //catherine1.printAllRecettesWith(LAIT);
@@ -75,6 +82,18 @@ public final class Main {
             input = keyb.nextLine();
         }
         return list;
+    }
+
+    public static String cleanString(String s){
+        s = s
+                .replaceAll("[èéê]", "e")
+                .replaceAll("[àâ]", "a")
+                .replaceAll(" \\(", "(")
+                .replaceAll(" ", "_")
+                .replaceAll("'", "_");
+        s = s.toUpperCase(Locale.ROOT);
+        s = s.trim();
+        return s;
     }
 
 

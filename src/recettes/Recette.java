@@ -58,7 +58,7 @@ public final class Recette {
 
     public boolean contains(String ingredientNom){
         for (Composant c : ingredients){
-            if (c.getIngredient().getName()==ingredientNom){
+            if (c.getIngredient().getName().equals(ingredientNom)){
                 return true;
             }
         }
