@@ -53,15 +53,15 @@ Crème à la framboise de Françoise, 500g framboise, 2 crème aigre, 1 citron v
 Crème de courge des Mossettes, 300g courge, 0.5 oignon, 0.25 poireau, 2cs huile(olive), 1 thym, 0.5 orange, 1.5dl fond(volaille), 0.5dl creme, 100g champignon, 1 echalotte, 2cs huile(olive), 1cc kirsch, 0 sel
 Eboulis, 2 lard, 240g sérac, 2cs creme, 1cs ciboulette, 0.5cs cardamine, 0 sel, 0 poivre
 Parfait au chocolat blanc, 0.5dl eau, 75g sucre, 4 jaune d'oeuf, 50g chocolat blanc, 2.5dl creme, 50g chocolat noir
-Parfait glacé aux fleurs de sureau, 2dl eau, 250g sucre, 20 fleur de sureau, 4 blanc d'oeuf, 0.5 gelatine, 2.5 dl creme, 4 jaune d'oeuf
-Sauce aux tomates séchées, 100g tomates séchées(à l'huile), 2 ail, 2 échalottes, 150ml porto, 200ml fond(veau), 300ml creme, 0 citron, 0 ciboulette
-Moutarde de bénichon d'Irène, 45g moutarde en poudre, 50g canelle(baton), 37g anis, 250g sucre candy, 1 sucre, 9cs farine, 0.5l vin cuit
+Parfait glacé aux fleurs de sureau, 2dl eau, 250g sucre, 20 fleur de sureau, 4 blanc d'oeuf, 0.5 gelatine, 2.5dl creme, 4 jaune d'oeuf
+Sauce aux tomates séchées, 100g tomate séchée(à l'huile), 2 ail, 2 échalotte, 150ml porto, 200ml fond(veau), 300ml creme, 0 citron, 0 ciboulette
+Moutarde de bénichon d'Irène, 45g moutarde en poudre, 50g cannelle(baton), 37g anis, 250g sucre candy, 1 sucre, 9cs farine, 0.5l vin cuit
 Cake aux fruits confits d'Albert, 4 oeuf, 125g beurre, 250g sucre, 300g fruits confits, 2dl rhum, 1 citron, 1 orange, 250g farine
-Curry d'agneau aux abricots, 1kg agneau(épaule), 200g abricot sec, 2.5dl vin blanc, 4dl fond (agneau), 300g oignon, 2 ail, 2cs curry (fort), 20g gingembre, 2 oignon nouveau, 0 farine, 0 huile, 0 sel
+Curry d'agneau aux abricots, 1kg agneau(épaule), 200g abricot sec, 2.5dl vin(blanc), 4dl fond (agneau), 300g oignon, 2 ail, 2cs curry (fort), 20g gingembre, 2 oignon nouveau, 0 farine, 0 huile, 0 sel
 Tarte au citron, 40g beurre, 120g sucre, 2 citron, 3 jaune d'oeuf
 Poulet au vinaigre, 2dl vinaigre, 0.5dl calvados, 50g beurre, 0 huile, 0 sel, 1 poulet
 Salade poire avocat de Martine, 0 poire, 0 avocat, 0 pignon, 0 huile, 0 citron vert, 0 sel, 0 poivre, 0 parmesan
-Cocktail de crevettes avec pamplemousse, 3 pamplemousse, 8 noisette, 1 échalotts, 3cs huile(noisette), 0 sel, 0 poivre, 225g crevette
+Cocktail de crevettes avec pamplemousse, 3 pamplemousse, 8 noisette, 1 échalotte, 3cs huile(noisette), 0 sel, 0 poivre, 225g crevette
 Régal chocolat, 6 oeuf, 1 vanille, 0.25cc sel, 270g sucre, 150g farine, 390g chocolat noir, 20g cacao, 110g beurre, 32.5cl creme (entière)
 Gateau au chocolat de Hermé, 250g chocolat noir, 250g beurre, 200g sucre, 4 oeuf, 70g farine
 Tiramisou sans oeuf, 140g pellerine, 0 cacao, 1.5dl café, 70g sucre, 2cs cognac, 2.5dl creme, 200g mascarpone
@@ -83,8 +83,8 @@ Meringues de Marylou, 1 blanc d'oeuf, 50g sucre
 Cake du mercredi (Mickey), 3 oeuf, 1 sucre, 2.5 farine, 0.5 lait, 0.75 huile, 1 poudre à lever, 1 citron
 Petits gâteaux au chocolat de Manon, 250g chocolat noir, 150g beurre, 4 oeuf, 200g sucre, 100g farine
 Pavlova, 4 blanc d'oeuf, 230g sucre, 1cc vinaigre, 1cs maizena, 1 citron, 50g sucre, 2 jaune d'oeuf, 10cl eau, 1cs maizena
-Hâchis parmentier (Emilie Uldry), 500 boeuf (hâchis), 0 huile(olive), 1 oignon, 1cs farine, 1 carotte, 1 petits pois, 1dl vin blanc, 2dl bouillon, 400g tomate(concassées), 0 thym, 0 sel, 0 poivre, 0 paprika
+Hâchis parmentier (Emilie Uldry), 500 boeuf (hâchis), 0 huile(olive), 1 oignon, 1cs farine, 1 carotte, 1 petits pois, 1dl vin (blanc), 2dl bouillon, 400g tomate(concassées), 0 thym, 0 sel, 0 poivre, 0 paprika
 Gâteau Gâteau aux pommes (Irène), 200g sucre, 200g beurre, 200g farine, 1cc poudre à lever, 3 oeuf, 1 citron, 0 sucre glace
 Gâteau du Vully (Marie-France Suard), 1.5dl lait, 1 oeuf, 15g levure, 1cc sel, 2cs sucre, 25g beurre, 250g farine, 1.5 crème double, 2cs sucre(cassonade)
-Crème d'ananas, 1 ananas(boite), 3 oeuf, 1 kirsch, 2sl crème(fraîche), 4cs sucre, 1cs maizena
+Crème d'ananas, 1 ananas(boite), 3 oeuf, 1 kirsch, 2dl crème(fraîche), 4cs sucre, 1cs maizena
 Thé aux oignons contre la grippe (Germaine Cousin), 1.5dl eau, 6 oignon, 15 genièvre, 0.25cc muscade, 4 laurier, 10 girofle, 5 cannelle, 6 citron

@@ -68,7 +68,7 @@ public final class Ingredient {
             result = new Ingredient(s);
         }
         if (!allowedIngredients.contains(result.name)){
-            throw new IllegalArgumentException(String.format("Aucun ingrédient correspondant à <<%s>> n'est répertorié.", s));
+            throw new IllegalArgumentException(String.format("Aucun ingrédient correspondant à <<%s>> n'est répertorié.", result.name));
         }
         return result;
 

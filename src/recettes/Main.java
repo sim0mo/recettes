@@ -2,6 +2,7 @@ package recettes;
 
 import recettes.ingredients.Composant;
 import recettes.ingredients.Ingredient;
+import recettes.ingredients.Unite;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -36,25 +37,31 @@ public final class Main {
 
     public static void main(String[] args) {
         Recueil gastronogeek = load("/gastronogeek.txt");
-//        Recueil catherine1 = load("/catherine1.txt");
-        gastronogeek.printAllRecettesWith("vodka" );
+        Recueil catherine1 = load("/catherine1.txt");
+//        gastronogeek.printAllRecettesWith("vodka" );
 
-        //gastronoGeek.recettesDisponibles(promptIngredientsIllimited())).forEaach(System.out::println);
-        //catherine1.printAllRecettesWith(LAIT);
-        //catherine1.recettesPresqueDisponibles(promptIngredientsIllimited()).forEach(System.out::println);
-//        catherine1.searchDisjunctive(List.of(SAFRAN,CANNELLE)).forEach(System.out::println);
-        //catherine1.recettesDisponibles(List.of(
-//                new Composant(new Ingredient(OLIVE), 300, Unite.G),
-//                new Composant(new Ingredient(ANCHOIS), 100, Unite.G),
-//                new Composant(new Ingredient(THON), 101, Unite.G),
-//                new Composant(new Ingredient(AIL), 5),
-//                new Composant(new Ingredient(FARINE), 300),
-//                new Composant(new Ingredient(OEUF), 10),
-//                new Composant(new Ingredient(SUCRE), 300, Unite.G),
-//                new Composant(new Ingredient(BEURRE), 500),
-//                new Composant(new Ingredient(LAIT), 5, Unite.DL),
-//                new Composant(new Ingredient(CHOCOLAT_NOIR), 600, Unite.G)
-//        ))).forEach(System.out::println);
+        //gastronoGeek.recettesDisponibles(promptIngredientsIllimited())).forEach(System.out::println);
+        catherine1.printAllRecettesWith("LAIT");
+        System.out.println();
+
+//        catherine1.recettesPresqueDisponibles(promptIngredientsIllimited()).forEach(System.out::println);
+//        System.out.println();
+
+        catherine1.searchDisjunctive(List.of("SAFRAN","CANNELLE")).forEach(System.out::println);
+        System.out.println();
+
+        catherine1.recettesDisponibles(List.of(
+                new Composant(new Ingredient("OLIVE"), 300, Unite.G),
+                new Composant(new Ingredient("ANCHOIS"), 100, Unite.G),
+                new Composant(new Ingredient("THON"), 101, Unite.G),
+                new Composant(new Ingredient("AIL"), 5),
+                new Composant(new Ingredient("FARINE"), 300),
+                new Composant(new Ingredient("OEUF"), 10),
+                new Composant(new Ingredient("SUCRE"), 300, Unite.G),
+                new Composant(new Ingredient("BEURRE"), 500),
+                new Composant(new Ingredient("LAIT"), 5, Unite.DL),
+                new Composant(new Ingredient("CHOCOLAT_NOIR"), 600, Unite.G)
+        )).forEach(System.out::println);
         //gastronoGeek.recettesContenant(EAU)).forEach(x -> System.out.println(x.getName()));
 
         // TODO: 18.04.20 gui 
