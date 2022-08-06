@@ -7,8 +7,12 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
+/**
+ * Un Recueil de Recettes.
+ */
 public final class Recueil {
     private final List<Recette> recettes;
 
@@ -74,7 +78,7 @@ public final class Recueil {
                 boolean faisable = true;
                 for (Composant required : r.getIngredients()){
                     for (Composant disposable : ingredientsDisponibles){
-                        if (required.getIngredient().getName() == disposable.getIngredient().getName()){
+                        if (Objects.equals(required.getIngredient().getName(), disposable.getIngredient().getName())){
                             //System.out.println(required.quantiteFondamentale() + "   " + disposable.quantiteFondamentale());
                             faisable &= (required.quantiteFondamentale() <= disposable.quantiteFondamentale());
                         }
@@ -99,7 +103,9 @@ public final class Recueil {
             int nMatches = 0;
             for(Composant c : r.getIngredients()){
                 for(Composant d : ingredientsDisponibles){
-                    if(c.getIngredient().getName() == d.getIngredient().getName() && c.quantiteFondamentale() <= d.quantiteFondamentale()){
+                    if(Objects.equals(c.getIngredient().getName(), d.getIngredient().getName()) &&
+                            c.quantiteFondamentale() <= d.quantiteFondamentale()
+                    ){
                         nMatches++;
                     }
                 }

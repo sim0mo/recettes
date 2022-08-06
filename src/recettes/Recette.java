@@ -5,9 +5,12 @@ import recettes.ingredients.Composant;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
+/**
+ * Une Recette contient des Composants et a un nom.
+ */
 public final class Recette {
-    //private final Map<Ingredient, Double> ingredients;
     private final List<Composant> ingredients;
     private final String name;
 
@@ -29,7 +32,9 @@ public final class Recette {
 //    }
     public void addComposant(Composant composant){
         for (Composant c : ingredients){
-            if (c.getIngredient().getName()==composant.getIngredient().getName() && c.getIngredient().getSpecification().equals(composant.getIngredient().getSpecification())){
+            if (Objects.equals(c.getIngredient().getName(), composant.getIngredient().getName()) &&
+                    c.getIngredient().getSpecification().equals(composant.getIngredient().getSpecification())
+            ){
                 throw new IllegalArgumentException(String.format("Déjà dans la recette ! (%s)", composant.getIngredient().getName()));
             }
         }

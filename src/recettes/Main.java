@@ -41,16 +41,16 @@ public final class Main {
 //        gastronogeek.printAllRecettesWith("vodka" );
 
         //gastronoGeek.recettesDisponibles(promptIngredientsIllimited())).forEach(System.out::println);
-        catherine1.printAllRecettesWith("LAIT");
-        System.out.println();
+//        catherine1.printAllRecettesWith("LAIT");
+//        System.out.println();
 
 //        catherine1.recettesPresqueDisponibles(promptIngredientsIllimited()).forEach(System.out::println);
 //        System.out.println();
 
-        catherine1.searchDisjunctive(List.of("SAFRAN","CANNELLE")).forEach(System.out::println);
-        System.out.println();
+//        catherine1.searchDisjunctive(List.of("SAFRAN","CANNELLE")).forEach(System.out::println);
+//        System.out.println("***");
 
-        catherine1.recettesDisponibles(List.of(
+        catherine1.recettesPresqueDisponibles(List.of(
                 new Composant(new Ingredient("OLIVE"), 300, Unite.G),
                 new Composant(new Ingredient("ANCHOIS"), 100, Unite.G),
                 new Composant(new Ingredient("THON"), 101, Unite.G),

@@ -1,12 +1,16 @@
 package recettes.ingredients;
 
-import recettes.Main;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
+/**
+ * Un Composant est un Ingrédient avec une quantité et une unité
+ */
 public final class Composant {
     private final Ingredient ingredient;
     private final double quantite;
