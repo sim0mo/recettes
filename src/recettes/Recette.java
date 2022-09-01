@@ -18,24 +18,13 @@ public final class Recette {
         this.name = name;
         ingredients = new ArrayList<>();
     }
-//    public void addIngredient(Ingredient ingredient, double quantite){
-//        addIngredient(ingredient, quantite, null);
-//    }
-//    public void addIngredient(Ingredient ingredient, double quantite, Unite unite){
-//        for (Composant c : ingredients){
-//            // TODO: 18.08.20 utiliser .equals () ?
-//            if (c.getIngredient() == ingredient) {
-//                throw new IllegalArgumentException("Déjà dans la recette !");
-//            }
-//        }
-//        ingredients.add(new Composant(ingredient, quantite, unite));
-//    }
+
     public void addComposant(Composant composant){
         for (Composant c : ingredients){
             if (Objects.equals(c.getIngredient().getName(), composant.getIngredient().getName()) &&
                     c.getIngredient().getSpecification().equals(composant.getIngredient().getSpecification())
             ){
-                throw new IllegalArgumentException(String.format("Déjà dans la recette ! (%s)", composant.getIngredient().getName()));
+                throw new IllegalArgumentException(String.format("Déjà dans la recette %s ! (%s)", this.name,composant.getIngredient().getName()));
             }
         }
         ingredients.add(composant);
@@ -53,7 +42,7 @@ public final class Recette {
                 sb.append(String.valueOf(e.getUnite()).toLowerCase());
             sb.append(" ")
                     .append(e.getIngredient().getName())
-                    .append(e.getIngredient().getSpecification())
+                    //.append(e.getIngredient().getSpecification())
                     .append("\n");
         }
         return sb.toString();

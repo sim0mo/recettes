@@ -52,25 +52,6 @@ public final class Composant {
     }
 
 
-    private static Map<String, String> synonyms = new HashMap<>();
-    static {
-        try{
-            BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(
-                            Objects.requireNonNull(Composant.class.getClassLoader().getResourceAsStream("synonyms.txt")),
-                            StandardCharsets.UTF_8));
-            reader.lines().forEachOrdered(l -> {
-                List<String> line = List.of(l.split(","));
-                for(String synonym : line.subList(1, line.size())){
-                    synonyms.put(line.get(0), synonym);
-                }
-            });
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-
     public static Composant parse(String s){
         String second = s.substring(s.indexOf(" ")+1);
         String first = s.substring(0, s.indexOf(" "));
@@ -78,6 +59,7 @@ public final class Composant {
         //System.out.println(zero);
         Ingredient in;
         in = Ingredient.fromString(second);
+
 
         Unite un = Unite.parse(first);
         double qu = Unite.parseNumber(first);

@@ -50,7 +50,7 @@ Sauté de veau Marengo, 800g veau(épaule), 100g oignon, 1 vin(blanc), 1 bouillo
 Tarte aux amandes de Martine, 1 pâte feuilletée, 1dl creme, 3dl lait, 1 oeuf, 1cs sucre vanillé, 125g sucre, 150g noisette(moulues)
 Gâteau Bullois de Françoise, 1 pâte brisée(sucrée), 200g sucre, 200g noix, 1cs miel, 1.5dl crème, 0 chocolat noir
 Crème à la framboise de Françoise, 500g framboise, 2 crème aigre, 1 citron vert, 0 sucre
-Crème de courge des Mossettes, 300g courge, 0.5 oignon, 0.25 poireau, 2cs huile(olive), 1 thym, 0.5 orange, 1.5dl fond(volaille), 0.5dl creme, 100g champignon, 1 echalotte, 2cs huile(olive), 1cc kirsch, 0 sel
+Crème de courge des Mossettes, 300g courge, 0.5 oignon, 0.25 poireau, 2cs huile(olive), 1 thym, 0.5 orange, 1.5dl fond(volaille), 0.5dl creme, 100g champignon, 1 echalotte, 1cc kirsch, 0 sel
 Eboulis, 2 lard, 240g sérac, 2cs creme, 1cs ciboulette, 0.5cs cardamine, 0 sel, 0 poivre
 Parfait au chocolat blanc, 0.5dl eau, 75g sucre, 4 jaune d'oeuf, 50g chocolat blanc, 2.5dl creme, 50g chocolat noir
 Parfait glacé aux fleurs de sureau, 2dl eau, 250g sucre, 20 fleur de sureau, 4 blanc d'oeuf, 0.5 gelatine, 2.5dl creme, 4 jaune d'oeuf
@@ -66,7 +66,7 @@ Régal chocolat, 6 oeuf, 1 vanille, 0.25cc sel, 270g sucre, 150g farine, 390g ch
 Gateau au chocolat de Hermé, 250g chocolat noir, 250g beurre, 200g sucre, 4 oeuf, 70g farine
 Tiramisou sans oeuf, 140g pellerine, 0 cacao, 1.5dl café, 70g sucre, 2cs cognac, 2.5dl creme, 200g mascarpone
 Tagliatelles aux crevettes à la portugaise (Châtelard à Corsier), 24 crevette, 0 ail, 0.5 citron, 400g tomate(concassées), 0 piment(purée),0 huile(olive), 0 sel, 0 poivre, 0 ciboulette, 0 persil, 0 pâtes(tagliatelles)
-Gateau de Payerne, 150g beurre, 225g sucre, 125g amande, 125 noisette, 150g farine, 100g sucre, 1 sucre vanillé, 2dl creme
+Gateau de Payerne, 150g beurre, 325g sucre, 125g amande, 125 noisette, 150g farine, 1 sucre vanillé, 2dl creme
 Tarte rapide aux fruits de la Régalade, 125g beurre, 1.5dl sucre, 1 oeuf, 1.75 farine, 0.25cc sel, 0 fruit, 0 cannelle
 Biscaumes d'Irène, 1.150kg farine, 400g sucre, 2.5dl lait, 40g épice, 25g carbonate d'ammonium, 250g miel, 1dl crème, 1 oeuf, 0.25cc sel, 1cs vin cuit
 Biscaumes de la grand-maman de Jacques Perritaz, 750g farine, 225g miel, 300g sucre (brun), 2.5dl lait, 30g margarine, 1 oeuf, 20g carbonate d'ammonium, 30g épice
@@ -75,14 +75,14 @@ Salade au chou frisé de Marie-Jeanne, 0.5 chou, 2 oignon nouveau, 1 soupe chino
 Mousse au chocolat de Madeleine, 225g chocolat noir, 4 oeuf, 60g beurre, 100g sucre, 1 café(ristretto)
 Moëlleux au chocolat (Damien Caron), 150g beurre, 200g chocolat noir, 5 oeuf, 100g sucre(cassonade), 0.25cc sel, 100g amande(moulues)
 Cake mousseline (Madeleine), 200g farine, 150g sucre, 0.25cc sel, 0.5 poudre à lever, 100g beurre, 1 citron, 8cs lait, 2 oeuf
-Pavés au chocolat (Betty Bossy), 3 oeuf, 250g sucre, 4cc sucre vanille, 2cs cacao, 3dl lait, 300g farine, 2cc poudre a lever, 250g margarine, 200g sucre glace, 2cs cacao, 4cs café
+Pavés au chocolat (Betty Bossy), 3 oeuf, 250g sucre, 4cc sucre vanille, 3dl lait, 300g farine, 2cc poudre a lever, 250g margarine, 200g sucre glace, 4cs cacao, 4cs café
 Petits nids de Pâques en chocolat, 300g chocolat noir, 200g chocolat au lait, 60g beurre, 1cs miel, 200g corn flakes
 Pâte à crêpe, 5dl lait, 250g farine, 3 oeuf, 1cs huile, 0.5cc sel
 Spätzli, 250g farine, 7g sel, 1.5dl lait, 2 oeuf
 Meringues de Marylou, 1 blanc d'oeuf, 50g sucre
 Cake du mercredi (Mickey), 3 oeuf, 1 sucre, 2.5 farine, 0.5 lait, 0.75 huile, 1 poudre à lever, 1 citron
 Petits gâteaux au chocolat de Manon, 250g chocolat noir, 150g beurre, 4 oeuf, 200g sucre, 100g farine
-Pavlova, 4 blanc d'oeuf, 230g sucre, 1cc vinaigre, 1cs maizena, 1 citron, 50g sucre, 2 jaune d'oeuf, 10cl eau, 1cs maizena
+Pavlova, 4 blanc d'oeuf, 280g sucre, 1cc vinaigre, 2cs maizena, 1 citron, 2 jaune d'oeuf, 10cl eau
 Hâchis parmentier (Emilie Uldry), 500 boeuf (hâchis), 0 huile(olive), 1 oignon, 1cs farine, 1 carotte, 1 petits pois, 1dl vin (blanc), 2dl bouillon, 400g tomate(concassées), 0 thym, 0 sel, 0 poivre, 0 paprika
 Gâteau Gâteau aux pommes (Irène), 200g sucre, 200g beurre, 200g farine, 1cc poudre à lever, 3 oeuf, 1 citron, 0 sucre glace
 Gâteau du Vully (Marie-France Suard), 1.5dl lait, 1 oeuf, 15g levure, 1cc sel, 2cs sucre, 25g beurre, 250g farine, 1.5 crème double, 2cs sucre(cassonade)

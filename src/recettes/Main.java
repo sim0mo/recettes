@@ -50,20 +50,22 @@ public final class Main {
 //        catherine1.searchDisjunctive(List.of("SAFRAN","CANNELLE")).forEach(System.out::println);
 //        System.out.println("***");
 
-        catherine1.recettesPresqueDisponibles(List.of(
-                new Composant(new Ingredient("OLIVE"), 300, Unite.G),
-                new Composant(new Ingredient("ANCHOIS"), 100, Unite.G),
-                new Composant(new Ingredient("THON"), 101, Unite.G),
-                new Composant(new Ingredient("AIL"), 5),
-                new Composant(new Ingredient("FARINE"), 300),
-                new Composant(new Ingredient("OEUF"), 10),
-                new Composant(new Ingredient("SUCRE"), 300, Unite.G),
-                new Composant(new Ingredient("BEURRE"), 500),
-                new Composant(new Ingredient("LAIT"), 5, Unite.DL),
-                new Composant(new Ingredient("CHOCOLAT_NOIR"), 600, Unite.G)
-        )).forEach(System.out::println);
+//        catherine1.recettesPresqueDisponibles(List.of(
+//                new Composant(new Ingredient("OLIVE"), 300, Unite.G),
+//                new Composant(new Ingredient("ANCHOIS"), 100, Unite.G),
+//                new Composant(new Ingredient("THON"), 101, Unite.G),
+//                new Composant(new Ingredient("AIL"), 5),
+//                new Composant(new Ingredient("FARINE"), 300),
+//                new Composant(new Ingredient("OEUF"), 10),
+//                new Composant(new Ingredient("SUCRE"), 300, Unite.G),
+//                new Composant(new Ingredient("BEURRE"), 500),
+//                new Composant(new Ingredient("LAIT"), 5, Unite.DL),
+//                new Composant(new Ingredient("CHOCOLAT_NOIR"), 600, Unite.G)
+//        )).forEach(System.out::println);
         //gastronoGeek.recettesContenant(EAU)).forEach(x -> System.out.println(x.getName()));
+//        gastronogeek.searchConjunctive("GIN").forEach(x -> System.out.println(x));
 
+        catherine1.printAllRecettesWith("NOIX_DE_MUSCADE");
         // TODO: 18.04.20 gui 
     }
 
@@ -100,6 +102,8 @@ public final class Main {
                 .replaceAll("'", "_");
         s = s.toUpperCase(Locale.ROOT);
         s = s.trim();
+
+        s = Ingredient.synonyms.getOrDefault(s, s);
         return s;
     }
 

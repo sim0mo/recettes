@@ -29,9 +29,10 @@ public final class Ingredient {
     }
 
     public String getName(){
+//        return name;
         return (specification.equals("") ?
                 name :
-                this.name + "(" + specification + ")");
+                this.name + specification);
     }
 
     @Override
@@ -57,6 +58,25 @@ public final class Ingredient {
                     new InputStreamReader(
                             Objects.requireNonNull(Ingredient.class.getClassLoader().getResourceAsStream("ingredients.txt")), StandardCharsets.UTF_8));
             reader.lines().forEachOrdered(l -> allowedIngredients.addAll(Arrays.asList(l.split(","))));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    //Ingredient in first position of each line will be considered as standard form
+    public static Map<String, String> synonyms = new HashMap<>();
+    static {
+        try{
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(
+                            Objects.requireNonNull(Composant.class.getClassLoader().getResourceAsStream("synonyms.txt")),
+                            StandardCharsets.UTF_8));
+            reader.lines().forEachOrdered(l -> {
+                List<String> line = List.of(l.split(","));
+                for(String synonym : line.subList(1, line.size())){
+                    synonyms.put(synonym, line.get(0));
+                }
+            });
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
